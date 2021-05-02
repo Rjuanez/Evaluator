@@ -1,0 +1,8 @@
+[user]
+	name = Ruben Juanez
+	email = ruben@juanez.name
+[color]
+	status = auto
+	branch = auto
+	diff = auto
+	interactive = auto
