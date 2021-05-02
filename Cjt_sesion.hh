@@ -12,32 +12,33 @@
 #include "Sesion.hh"
 
 /** @class Cjt_sesion
- *  @brief 
- * 
+ *  @brief
+ *
  */
 
 class Cjt_sesion {
-    
+
 private:
     map <string, Sesion> sesiones;
-    
+
 public:
-    
+
     /** @brief Creadora por defecto.
 
       Se ejecuta automáticamente al declarar un probelma.
-      \pre 
+      \pre
       \post El resultado es un mapa de sesiones vacio
     */
     Cjt_sesion();
-    
+
+    ~Cjt_sesion();
     //Lectura y escritura
-    
+
     /** @brief Añade sesiones
         \pre n > 0
         \post Se le añaden al parametro implicito un numero n de sesiones
     */
     void leer_sesiones (int n);
-    
+
 };
 #endif

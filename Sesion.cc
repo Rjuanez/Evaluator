@@ -9,6 +9,7 @@ using namespace std;
 Sesion::Sesion(string identificador) {
     this->identificador = identificador;
 }
+Sesion::~Sesion() {}
 
 void Sesion::leer_arbol(BinTree<string>& a) {
   string x;

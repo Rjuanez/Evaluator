@@ -8,6 +8,7 @@
 using namespace std;
 
 Cjt_sesion::Cjt_sesion() { }
+Cjt_sesion::~Cjt_sesion() { }
 
 void Cjt_sesion::leer_sesiones(int n) {
     while (n > 0) {
@@ -16,7 +17,7 @@ void Cjt_sesion::leer_sesiones(int n) {
         Sesion s(id);
         s.construir_arbol();
         this->sesiones.insert(pair<string, Sesion>(id, s));
-    
+        --n;
     }
 
 }
