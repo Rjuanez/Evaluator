@@ -4,6 +4,7 @@ using namespace std;
 
 #include "Cjt_problema.hh"
 #include "Cjt_sesion.hh"
+#include "Cjt_curso.hh"
 
 
 int main() {
@@ -18,5 +19,10 @@ int main() {
     //leemos y añadimos la cantidad de sesiones a añadir a lista_sesones
     cin >> n;
     lista_sesiones.leer_sesiones(n);
+
+    Cjt_curso lista_cursos;
+    //leemos y añadimos la cantidad de cursos a añadir a lista_cursos
+    cin >> n;
+    lista_cursos.leer_cursos(n);
 
 }

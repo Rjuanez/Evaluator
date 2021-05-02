@@ -8,6 +8,7 @@
 #ifndef NO_DIAGRAM
 #include <string>
 #include <map>
+#include <set>
 #endif
 
 
@@ -20,6 +21,7 @@ class Curso {
 
 private:
 
+  std::set<std::string> sesiones;
 
 public:
     /** @file Sesion.hh
@@ -44,6 +46,8 @@ public:
       \post El problema ya no existe
     */
     ~Curso();
+
+    void leer_sesiones();
 
 
 };
