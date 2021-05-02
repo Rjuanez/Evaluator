@@ -1,5 +1,5 @@
 /** @file Problema.hh
- * @brief Especificacion de problema
+ * @brief Especificacion de problema con letra
  */
 
 #ifndef _PROBLEMA_HH
