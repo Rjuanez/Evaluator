@@ -72,9 +72,6 @@ public:
       \post el parametro implicito es igual a c
     */
     void construir_arbol();
-    
-    
-    
-    
+     
 };
 #endif

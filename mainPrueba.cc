@@ -3,7 +3,7 @@
 using namespace std;
 
 #include "Cjt_problema.hh"
-#include "Ctj_sesion.hh"
+#include "Cjt_sesion.hh"
 
 int main() {
     Cjt_problema lista_problemas;

@@ -3,6 +3,7 @@
 
 #include "Sesion.hh"
 #include "Cjt_sesion.hh"
+#include "BinTree.hh"
 
 using namespace std;
 
@@ -13,8 +14,8 @@ void Cjt_sesion::leer_sesiones(int n) {
         string id;
         cin >> id;
         Sesion s(id);
-        s.contruir_arbol();
-        problemas.insert(pair<string, Sesion>(id, s));
+        s.construir_arbol();
+        this->sesiones.insert(pair<string, Sesion>(id, s));
     
     }
 
