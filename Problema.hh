@@ -49,6 +49,10 @@ public:
     */
     ~Problema();
 
+    int consultar_envios();
+
+    void escribir_problema();
+
 
 };
 #endif

@@ -10,6 +10,7 @@
 #endif
 
 #include "Curso.hh"
+#include "Cjt_sesion.hh"
 
 
 /** @class Cjt_curso
@@ -22,6 +23,7 @@ class Cjt_curso {
 private:
 
 std::vector <Curso> cursos;
+
 
 
 public:
@@ -41,7 +43,16 @@ public:
         \pre n > 0
         \post Se le añaden al parametro implicito un numero n de sesiones
     */
-    void leer_cursos(int n);
+    void leer_cursos(int n, const Cjt_sesion& sesiones);
+
+    std::vector<std::string> listar_sesiones(int curso);
+
+    void inscribir_usuario(int c);
+    int num_inscritos(int c);
+
+    std::string consultar_sesion_problema(std::string problema, int curso);
+
+
 
 };
 #endif

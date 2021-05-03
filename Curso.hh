@@ -8,9 +8,11 @@
 #ifndef NO_DIAGRAM
 #include <string>
 #include <map>
-#include <set>
+#include <vector>
+#include <list>
 #endif
 
+#include "Cjt_sesion.hh"
 
 /** @class Curso
  *  @brief
@@ -21,7 +23,12 @@ class Curso {
 
 private:
 
-  std::set<std::string> sesiones;
+  std::vector<std::string> sesiones;
+  int usuarios_completados;
+  int usuarios_inscritos;
+  std::map<std::string, std::string> lista_problemas_sesiones;
+
+  bool existe_problema(string id);
 
 public:
     /** @file Sesion.hh
@@ -47,7 +54,15 @@ public:
     */
     ~Curso();
 
-    void leer_sesiones();
+    void leer_sesiones(Cjt_sesion sesiones);
+
+    std::vector<std::string> listar_sesiones();
+
+    void inscribir_usuario();
+
+    int num_inscritos();
+
+    std::string consultar_sesion_problema(std::string problema);
 
 
 };

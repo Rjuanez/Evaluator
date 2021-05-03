@@ -7,6 +7,8 @@
 
 #ifndef NO_DIAGRAM
 #include <map>
+#include <vector>
+#include <list>
 #endif
 
 #include "Sesion.hh"
@@ -19,7 +21,9 @@
 class Cjt_sesion {
 
 private:
-    map <string, Sesion> sesiones;
+    map <std::string, Sesion> sesiones;
+
+    bool existe_sesion (std::string id);
 
 public:
 
@@ -32,6 +36,17 @@ public:
     Cjt_sesion();
 
     ~Cjt_sesion();
+
+    void anadir_sesion(std::string id);
+
+    //Consultoras
+
+    int num_sesiones();
+
+    void listar_primer_problema(std::vector<std::string>& v);
+
+    std::list<std::string> consultar_problemas(string sesion);
+
     //Lectura y escritura
 
     /** @brief Añade sesiones
@@ -39,6 +54,9 @@ public:
         \post Se le añaden al parametro implicito un numero n de sesiones
     */
     void leer_sesiones (int n);
+
+    void listar_sesiones();
+    void listar_sesion(std::string id);
 
 };
 #endif

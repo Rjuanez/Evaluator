@@ -7,10 +7,10 @@
 
 #ifndef NO_DIAGRAM
 #include <map>
+#include <vector>
 #endif
 #include "Problema.hh"
 
-using namespace std;
 
 /** @class Cjt_problema
  *  @brief
@@ -21,7 +21,9 @@ class Cjt_problema {
 
 private:
     //faltan cosas
-    map<string, Problema> problemas;
+    std::map<std::string, Problema> problemas;
+
+    bool existe_problema (std::string id);
 
 public:
 
@@ -34,6 +36,13 @@ public:
 
     ~Cjt_problema();
 
+    void anadir_problema(std::string id);
+
+    //Consultoras
+
+    int num_problemas();
+
+
     // Lectura i escriptura
 
     /** @brief Añade n problemas al parametro implicito
@@ -41,7 +50,14 @@ public:
      que llegirem, i les dades de tal nombre d'estudiants diferent
         \post Se le añaden al parametro implicito un numero n de problemas identificados por id
     */
-    void leer_problemas (int n);
+    void leer_problemas(int n);
+
+    std::vector<Problema> listar_problemas(const std::vector<std::string>& v);
+
+    void listar_enviables();
+
+    void listar_problemas();
+    void listar_problema(std::string id);
 
 };
 #endif
